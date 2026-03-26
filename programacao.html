@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação - InclusãoTech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="container flex-container">
+            <div class="logo">
+                <img src="img/logo-placeholder.png" alt="Aquela logo top">
+            </div>
+             <button id="btn-tema" class="btn-tema" aria-label="Alternar tema claro e escuro">
+                🌙
+            </button>
+            <nav class="navegacao-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="programacao.html">Programação</a></li>
+                    <li><a href="formulario.html">Inscrição</a></li>
+                    <li><a href="area-participante.html">Área do Participante</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="secao-programacao">
+            <div class="cabecalho-secao">
+                <h2>Programação do Evento</h2>
+                <p>Confira as palestras e oficinas. Todos os horários contam com tradução simultânea em Libras.</p>
+            </div>
+
+            <div class="grid-programacao">
+                
+                <article class="card-palestra">
+                    <div class="card-hora">09:00 - 10:30</div>
+                    <div class="card-conteudo">
+                        <span class="badge-acessibilidade">Libras + Audiodescrição</span>
+                        <h3>Abertura: O Futuro da TI Inclusiva</h3>
+                        <p class="palestrante">Com Dr. Silva e Maria Souza</p>
+                        <p class="descricao">Uma visão geral sobre como o mercado de tecnologia está se adaptando para receber profissionais surdos e neurodivergentes.</p>
+                    </div>
+                </article>
+
+                <article class="card-palestra">
+                    <div class="card-hora">11:00 - 12:30</div>
+                    <div class="card-conteudo">
+                        <span class="badge-acessibilidade">Libras</span>
+                        <h3>Desenvolvimento Web e WCAG</h3>
+                        <p class="palestrante">Com Ana Paula (Dev Sênior)</p>
+                        <p class="descricao">Oficina prática sobre como aplicar as diretrizes de acessibilidade (WCAG) em projetos reais de front-end.</p>
+                    </div>
+                </article>
+
+                <article class="card-palestra">
+                    <div class="card-hora">14:00 - 16:00</div>
+                    <div class="card-conteudo">
+                        <span class="badge-acessibilidade">Libras + Material em Braille</span>
+                        <h3>Arquitetura de Back-end em C#</h3>
+                        <p class="palestrante">Com Carlos Mendes</p>
+                        <p class="descricao">Explorando orientação a objetos e boas práticas na construção de APIs robustas usando C# e .NET.</p>
+                    </div>
+                </article>
+
+                <article class="card-palestra">
+                    <div class="card-hora">16:30 - 18:00</div>
+                    <div class="card-conteudo">
+                        <span class="badge-acessibilidade">Libras</span>
+                        <h3>Mesa Redonda: Liderança e Negociação</h3>
+                        <p class="palestrante">Mediação: Prof. Roberto</p>
+                        <p class="descricao">Debate sobre soft skills, comunicação organizacional e como gerenciar equipes diversas em projetos de TI.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container">
+            <p>&copy; 2026 InclusãoTech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="btn-libras" aria-label="Ativar tradutor virtual de Libras">
+        <img src="img/icone-libras.png" alt="Icone top aqui">
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

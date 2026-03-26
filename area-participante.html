@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Participante - InclusãoTech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="container flex-container">
+            <div class="logo">
+                <img src="img/logo-placeholder.png" alt="Logoooo">
+            </div>
+            <button id="btn-tema" class="btn-tema" aria-label="Alternar tema">🌙</button>
+            <nav class="navegacao-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="programacao.html">Programação</a></li>
+                    <li><a href="formulario.html">Inscrição</a></li>
+                    <li><a href="area-participante.html">Área do Participante</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <div class="boas-vindas">
+                <h2>Olá, João Pedro! 👋</h2>
+                <p>Bem-vindo ao seu painel de controle do InclusãoTech.</p>
+            </div>
+
+            <div class="grid-dashboard">
+                
+                <aside class="painel-agenda card-palestra">
+                    <h3>📅 Minhas Inscrições</h3>
+                    <ul class="lista-agenda">
+                        <li>
+                            <strong>09:00</strong> - Abertura: O Futuro da TI Inclusiva
+                            <span class="status-confirmado">Confirmado</span>
+                        </li>
+                        <li>
+                            <strong>14:00</strong> - Arquitetura de Back-end em C#
+                            <span class="status-confirmado">Confirmado</span>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="painel-certificados card-palestra">
+                    <h3>🎓 Emissão de Certificados</h3>
+                    <div class="certificado-item">
+                        <div>
+                            <h4>Certificado de Participação Geral</h4>
+                            <p>Carga horária: 10 horas</p>
+                        </div>
+                        <button class="btn-primario">Baixar PDF</button>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container"><p>&copy; 2026 InclusãoTech.</p></div>
+    </footer>
+
+    <button class="btn-libras" aria-label="Ativar tradutor de Libras">
+        <img src="img/icone-libras.png" alt="Libras">
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

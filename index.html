@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InclusãoTech - Tecnologia e Acessibilidade em TI</title>
+    
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="container flex-container">
+            <div class="logo">
+                <img src="img/logo-placeholder.png" alt="Alguma logo ">
+            </div>
+            
+            <button id="btn-tema" class="btn-tema" aria-label="Alternar tema">🌙</button>
+
+            <nav class="navegacao-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="programacao.html">Programação</a></li>
+                    <li><a href="formulario.html">Inscrição</a></li>
+                    <li><a href="area-participante.html">Área</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container grid-hero">
+                <div class="hero-conteudo">
+                    <h1>Tecnologia e Inclusão em um só lugar</h1>
+                    <p>Participe do maior evento acadêmico de TI na UNIP, totalmente acessível e pensado para todos. Palestras e oficinas.</p>
+                    <div class="hero-botoes">
+                        <a href="formulario.html" class="btn-primario">Garanta sua vaga</a>
+                        <a href="#diferenciais" class="btn-secundario">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="hero-imagem">
+                    <img src="img/hero-ilustration.png" alt="Imagem top que vai ficar top">
+                </div>
+            </div>
+        </section>
+
+        <section class="estatisticas">
+            <div class="container grid-quatro-colunas">
+                <div class="stat-item simple-card">
+                    <span class="stat-numero">15+</span>
+                    <span class="stat-texto">Palestras e Oficinas</span>
+                </div>
+                <div class="stat-item simple-card">
+                    <span class="stat-numero">100%</span>
+                    <span class="stat-texto">Acessível em Libras</span>
+                </div>
+                <div class="stat-item simple-card">
+                    <span class="stat-numero">2K+</span>
+                    <span class="stat-texto">Participantes Esperados</span>
+                </div>
+                <div class="stat-item simple-card">
+                    <span class="stat-numero">30h</span>
+                    <span class="stat-texto">De Certificação Válida</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="diferenciais container">
+            <div class="cabecalho-secao">
+                <h2>Por que participar do InclusãoTech?</h2>
+                <p>Muito mais que um evento, um ecossistema de aprendizado focado em acessibilidade.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-item bento-grande simple-card">
+                    <h3>Tradução Simultânea 🤟</h3>
+                    <p>Contamos com uma equipe de intérpretes de Libras em todas as transmissões e palestras presenciais.</p>
+                </div>
+                <div class="bento-item simple-card">
+                    <h3>Networking🤝</h3>
+                    <p>Conecte-se com outros estudantes e empresas parceiras.</p>
+                </div>
+                <div class="bento-item simple-card">
+                    <h3>Acessibilidade💻</h3>
+                    <p>Nossa plataforma foi construída seguindo padrões básicos de acessibilidade digital (WCAG).</p>
+                </div>
+                <div class="bento-item bento-largo simple-card">
+                    <h3>Certificação 🎓</h3>
+                    <p>Todo o tempo investido no evento gera certificação para abater horas na grade curricular.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container"><p>&copy; 2026 InclusãoTech. Todos os direitos reservados.</p></div>
+    </footer>
+
+    <button class="btn-libras" aria-label="Ativar tradutor de Libras">
+        <img src="img/icone-libras.png" alt="Sinal de Libras">
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - InclusãoTech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="container flex-container">
+            <div class="logo">
+                <img src="img/logo-placeholder.png" alt="Alguma imagem aí">
+            </div>
+             <button id="btn-tema" class="btn-tema" aria-label="Alternar tema">🌙</button>
+            <nav class="navegacao-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="programacao.html">Programação</a></li>
+                    <li><a href="formulário.html">Inscrição</a></li>
+                    <li><a href="area-participante.html">Área do Participante</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="secao-formulario">
+            <h2>Garante sua vaga no InclusãoTech</h2>
+            <p>Preencha os dados abaixo. O evento é gratuito, mas as vagas são limitadas.</p>
+            
+            <form action="#" method="POST" class="form-inscricao">
+                
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div class="grupo-input">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                    </div>
+                    
+                    <div class="linha-dupla">
+                        <div class="grupo-input">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="grupo-input">
+                            <label for="telefone">Telefone / WhatsApp *</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div class="grupo-input checkbox-container">
+                        <input type="checkbox" id="precisa_libras" name="precisa_libras">
+                        <label for="precisa_libras">Necessito de intérprete de Libras ou recursos de acessibilidade visual durante o evento.</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados Acadêmicos</legend>
+                    <div class="grupo-input">
+                        <label for="curso">Seu Curso *</label>
+                        <select id="curso" name="curso" required>
+                            <option value="">Selecione seu curso...</option>
+                            <option value="ads">Análise e Desenvolvimento de Sistemas (ADS)</option>
+                            <option value="cc">Ciência da Computação</option>
+                            <option value="si">Sistemas de Informação</option>
+                            <option value="redes">Redes de Computadores</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primario btn-block">Confirmar Inscrição</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container">
+            <p>&copy; 2026 InclusãoTech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="btn-libras" aria-label="Ativar tradutor virtual de Libras">
+        <img src="img/icone-libras.png" alt="Ícone de mãos sinalizando Libras">
+    </button>
+
+      <script src="js/script.js"></script>
+</body>
+</html>

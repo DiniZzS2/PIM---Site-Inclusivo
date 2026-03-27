@@ -10,24 +10,27 @@
 <body>
 
     <header class="cabecalho-principal">
-        <div class="container flex-container">
+        <div class="container navbar-grid">
             <div class="logo">
-                <img src="img/INFo.svg" >
+                <a href="index.html">
+                    <img src="img/INFo.svg" alt="Logo InfoTech UNIP">
+                </a>
             </div>
-            
-            <button id="btn-tema" class="btn-tema" aria-label="Alternar tema">🌙</button>
 
             <nav class="navegacao-principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="programacao.html">Programação</a></li>
-                    <li><a href="formulario.html">Inscrição</a></li>
-                    <li><a href="area-participante.html">Área do Participante   </a></li>
+                    <li><a href="area-participante.html">Área do Participante</a></li>  
                 </ul>
             </nav>
+
+            <div class="navbar-acoes">
+                <button id="btn-tema" class="btn-tema" title="Alternar Tema">🌙</button>
+                <a href="formulario.html" class="btn-nav-inscricao">Inscrição</a>
+            </div>
         </div>
     </header>
-
     <main>
         <section class="hero-wrapper">
             <div class="container">

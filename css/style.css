@@ -77,15 +77,23 @@ main {
  */
 .cabecalho-principal {
     background-color: var(--cor-card);
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     border-bottom: var(--borda);
-    width: 100%; 
+    position: sticky; /* Ela gruda no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Efeito de vidro se o fundo for levemente transparente */
+}
+
+.navbar-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img {
-    max-height: 80px; 
-    width: auto;      
-    display: block;   
+    height: 90px; /* Aumentei para dar presença */
+    width: auto;
     transition: transform 0.3s ease;
 }
 
@@ -101,27 +109,85 @@ main {
     }
 }
 
-.navegacao-principal ul { 
-    list-style: none; 
-    display: flex; 
-    gap: 1.5rem; }
+.navegacao-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
 
-.navegacao-principal a { 
-    text-decoration: none; 
-    color: var(--cor-texto); 
-    font-weight: 600; 
-    font-size: 0.9rem; }
+.navegacao-principal a {
+    text-decoration: none;
+    color: var(--cor-texto-mutado);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
 
-.navegacao-principal a:hover { 
-    color: var(--cor-primaria); }
+.navegacao-principal a:hover, 
+.navegacao-principal a.active {
+    color: var(--cor-primaria);
+}
+
+.navegacao-principal a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--cor-primaria);
+    transition: width 0.3s ease;
+}
+
+.navegacao-principal a:hover::after {
+    width: 100%;
+}
+
+.navbar-acoes {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
 
 .btn-tema {
-    background: none; 
-    border: var(--borda); 
-    font-size: 1.2rem; 
-    cursor: pointer; 
-    padding: 0.5rem; 
-    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: var(--borda);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.btn-tema:hover {
+    background: rgba(99, 102, 241, 0.1);
+    transform: rotate(15deg);
+}
+
+.btn-nav-inscricao {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-nav-inscricao:hover {
+    background-color: var(--cor-secundaria);
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+}
+
+@media (max-width: 992px) {
+    .navegacao-principal { display: none; } 
+    .logo img { height: 70px; }
 }
 
 .btn-primario, .btn-secundario {
@@ -185,13 +251,13 @@ main {
 
 .hero-grid {
     display: flex;
-    align-items: center; /* Centraliza a imagem verticalmente com o texto */
+    align-items: center; 
     justify-content: space-between;
-    gap: 3rem; /* Aumentamos um pouco o espaço entre texto e imagem */
+    gap: 3rem; 
 }
 
 .hero-conteudo {
-    /* MÁGICA AQUI: O texto ganha mais espaço (60%) */
+    
     flex: 0 0 60%; 
     text-align: left;
 }
@@ -200,22 +266,22 @@ main {
     margin-top: 2rem;
     flex: 0 0 40%;
     display: flex;
-    justify-content: center; /* Centraliza a foto no espaço dela */
+    justify-content: center; 
 }
 
 .hero-imagem img {
     width: 100%;
-    /* Limita a altura para não ficar um paredão gigante */
+    
     height: 380px; 
-    object-fit: cover; /* Corta as sobras sem esticar */
-    border-radius: var(--radius); /* Mantém o arredondado que você gosta */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Sombra suave pro PIM */
+    object-fit: cover; 
+    border-radius: var(--radius); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
 }
 
-/* No Mobile (celular), volta a ficar um embaixo do outro */
+
 @media (max-width: 992px) {
     .hero-grid {
-        flex-direction: column-reverse; /* Foto embaixo, texto em cima (melhor pra SEO) */
+        flex-direction: column-reverse; 
         text-align: center;
     }
     .hero-conteudo { text-align: center; flex: 1 1 100%; }

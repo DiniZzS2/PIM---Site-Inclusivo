@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição - InclusãoTech</title>
+    
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -16,7 +17,8 @@
 
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">☰</button>
 
-            <nav class="navegacao-principal" id="nav-links"> <ul>
+            <nav class="navegacao-principal" id="nav-links"> 
+                <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="programacao.html">Programação</a></li>
                     <li><a href="area-participante.html">Area do Participante</a></li>
@@ -31,67 +33,61 @@
     </header>
 
     <main class="container">
-        <section class="secao-formulario">
-            <h2>Garante sua vaga no InclusãoTech</h2>
-            <p>Preencha os dados abaixo. O evento é gratuito, mas as vagas são limitadas.</p>
+        <section class="inscricao-section" style="padding: 4rem 0;">
+            <div class="titulo-formulario" style="text-align: center; margin-bottom: 2rem;">
+                <h1>Garanta sua Vaga</h1>
+                <p>Preencha os dados abaixo para confirmar sua inscrição no maior evento de TI e C#.</p>
+            </div>
             
-            <form action="#" method="POST" class="form-inscricao">
+            <form id="form-inscricao" class="form-padrao" style="max-width: 600px; margin: 0 auto; background-color: var(--cor-card); padding: 2rem; border-radius: 12px; border: var(--borda);">
                 
-                <fieldset>
-                    <legend>Dados Pessoais</legend>
-                    
-                    <div class="grupo-input">
-                        <label for="nome">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
-                    </div>
-                    
-                    <div class="linha-dupla">
-                        <div class="grupo-input">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                        </div>
-                        <div class="grupo-input">
-                            <label for="telefone">Telefone / WhatsApp *</label>
-                            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
-                        </div>
-                    </div>
+                <div class="input-group" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="nome" style="font-weight: 600;">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Digite seu nome completo" style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
 
-                    <div class="grupo-input checkbox-container">
-                        <input type="checkbox" id="precisa_libras" name="precisa_libras">
-                        <label for="precisa_libras">Necessito de intérprete de Libras ou recursos de acessibilidade visual durante o evento.</label>
-                    </div>
-                </fieldset>
+                <div class="input-group" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="email" style="font-weight: 600;">E-mail *</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="seu.email@exemplo.com" style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
 
-                <fieldset>
-                    <legend>Dados Acadêmicos</legend>
-                    <div class="grupo-input">
-                        <label for="curso">Seu Curso *</label>
-                        <select id="curso" name="curso" required>
-                            <option value="">Selecione seu curso...</option>
-                            <option value="ads">Análise e Desenvolvimento de Sistemas (ADS)</option>
-                            <option value="cc">Ciência da Computação</option>
-                            <option value="si">Sistemas de Informação</option>
-                            <option value="redes">Redes de Computadores</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-                </fieldset>
+                <div class="input-group" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="telefone" style="font-weight: 600;">Telefone (Opcional)</label>
+                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(15) 99999-9999" style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
 
-                <button type="submit" class="btn-primario btn-block">Confirmar Inscrição</button>
+                <div class="input-group" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="curso" style="font-weight: 600;">Curso *</label>
+                    <select id="curso" name="curso" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+                        <option value="">Selecione seu curso...</option>
+                        <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="Ciência da Computação">Ciência da Computação</option>
+                        <option value="Engenharia da Computação">Engenharia da Computação</option>
+                        <option value="Sistemas de Informação">Sistemas de Informação</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="acessibilidade" name="acessibilidade" style="width: 18px; height: 18px;">
+                    <label for="acessibilidade">Preciso de recursos de acessibilidade (Libras, Audiodescrição, etc.)</label>
+                </div>
+
+                <button type="submit" class="btn-nav-inscricao" style="width: 100%; padding: 1rem; font-size: 1.1rem; border: none; cursor: pointer;">Confirmar Inscrição</button>
             </form>
         </section>
     </main>
 
     <footer class="rodape-principal">
-        <div class="container">
-            <p>&copy; 2026 InclusãoTech. Todos os direitos reservados.</p>
-        </div>
+        <div class="container"><p>&copy; 2026 InclusãoTech. Todos os direitos reservados.</p></div>
     </footer>
 
-    <button class="btn-libras" aria-label="Ativar tradutor virtual de Libras">
-        <img src="./img/Libras.png" alt="Sinal de Libras">    
+    <button class="btn-libras" aria-label="Ativar tradutor de Libras">
+        <img src="./img/Libras.png" alt="Sinal de Libras">
     </button>
 
-      <script src="./js/script.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/script.js"></script>
+    
 </body>
 </html>
